@@ -142,5 +142,6 @@ public class GameManager : MonoBehaviour
 
 
 //테스트
+//테스트2 
 
 }

@@ -140,6 +140,6 @@ public class GameManager : MonoBehaviour
         failText.SetActive(false);
     }
 
-
+    //TIL화이팅........
 
 }

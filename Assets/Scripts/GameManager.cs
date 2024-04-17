@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-//테스트
-//테스트2 
+//테스트  완 그 자 체
+//테스트2 벽
 
 }

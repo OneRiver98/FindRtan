@@ -9,4 +9,6 @@ public class RtryBtn : MonoBehaviour
     {
         SceneManager.LoadScene("MainScene");
     }
+
+    //µåµð¾î..
 }

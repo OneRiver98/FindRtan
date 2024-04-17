@@ -22,4 +22,5 @@ public class Borad : MonoBehaviour
             GameManager.Instance.fullCount = ary.Length;
         }
     }
+//Texttextet
 }

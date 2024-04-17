@@ -26,5 +26,5 @@ public class AudioManager : MonoBehaviour
         audioSource.clip = this.clip;
         audioSource.Play();
     }
-    // 테스트 1번
+    // OneMore
 }

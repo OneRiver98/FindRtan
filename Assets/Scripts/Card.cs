@@ -65,4 +65,5 @@ public class Card : MonoBehaviour
         back.SetActive(true);
         backImage.color = new Color(162/255f, 162/255f,162/255f,1f);
     }
+    //texet
 }

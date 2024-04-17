@@ -18,5 +18,7 @@ void Awake()
         {
             Destroy(gameObject);
         }
+
+    // 테스트입니다.
 }
 }

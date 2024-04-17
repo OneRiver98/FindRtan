@@ -139,6 +139,7 @@ public class GameManager : MonoBehaviour
     {
         failText.SetActive(false);
     }
-    // 테스트
-    
+
+
+
 }

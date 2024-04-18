@@ -23,7 +23,16 @@ public class Card : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         idx = abc; 
-        frontImage.sprite = Resources.Load<Sprite>($"rtan{idx}");
+        Sprite loadedSprite = Resources.Load<Sprite>($"image{idx}"); // $ {} 중괄호 안에 
+
+        // 스프라이트 크기 설정
+        frontImage.transform.localScale = new Vector3(
+          frontImage.sprite.bounds.size.x / loadedSprite.bounds.size.x,
+           frontImage.sprite.bounds.size.x / loadedSprite.bounds.size.y,
+            1f
+        );  // 2D 에서 z축 1은 무시
+
+        frontImage.sprite = loadedSprite;
     }
     public void opneCard()
     {

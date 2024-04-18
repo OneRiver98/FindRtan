@@ -587,8 +587,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19329a91deef48b47ba2600bb26848a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 8c6123d1da65aa74ebf86a337868f9b7, type: 3}
-  audioSource: {fileID: 0}
+  startAudioClip: {fileID: 8300000, guid: 8c6123d1da65aa74ebf86a337868f9b7, type: 3}
+  mainAudioClip: {fileID: 8300000, guid: 8c6123d1da65aa74ebf86a337868f9b7, type: 3}
+  secondAudioClip: {fileID: 8300000, guid: 90eae78e8ce85a849b5b0ca11b2de641, type: 3}
+  OneBtn: {fileID: 0}
+  TwoBtn: {fileID: 0}
+  TrdBtn: {fileID: 0}
+  bgmusic: {fileID: 0}
+  mario: {fileID: 0}
+  marios: {fileID: 0}
+  marioBoss: {fileID: 0}
 --- !u!1 &1433036097
 GameObject:
   m_ObjectHideFlags: 0

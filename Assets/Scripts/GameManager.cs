@@ -25,6 +25,12 @@ public class GameManager : MonoBehaviour
     public Camera cameraBackGround;
     int combo;
     public Animator anim;
+    public Text Count;
+    public float remaintime = 5.0f;
+    bool check = true;
+
+    public GameObject nextText; // 다음으로 넘어가는 텍스트 오브젝트
+
 
     private void Awake() 
     {
@@ -43,17 +49,32 @@ public class GameManager : MonoBehaviour
     {
         time -= Time.deltaTime;
         timeTxt.text = time.ToString("N2");
-
-        if(time <= 20.0f)
+        if (time <= 20.0f)
         {
-            timeTxt.color = new Color(1f,0f,0f,1f);
-            anim.SetBool("Delay", true);
+            if (check)
+        {
+                timeTxt.color = new Color(1f, 0f, 0f, 1f);
+                anim.SetBool("Delay", true);
+                AudioManager.instance.PlayMusic(AudioManager.instance.marioBoss); // 20초가 되었을때 한번만 실행
+                check = false;
+            }
         }
-
         if(time <= 0.0f)
         {
             GameOver();
             tryTxt.text = tryMatche + " 번 시도 했지만 실패 입니다.";
+        }
+        if (firstCard != null)
+        {
+            remaintime -= Time.deltaTime;
+            Count.text = remaintime.ToString("N2");
+            if (remaintime < 0)
+            {
+                firstCard.GetComponent<Card>().closeCardInvoke();
+                Count.text = "5.00";
+                remaintime = 5;
+                firstCard = null;
+            }
         }
     }
 
@@ -69,6 +90,8 @@ public class GameManager : MonoBehaviour
                 time += 5.0f;
                 combo = 0;
             }
+            remaintime = 5.0f;
+            Count.text = "5.00";
             audioSource.PlayOneShot(clip);
             firstCard.destroyCard();
             secondCard.destroyCard();
@@ -116,6 +139,8 @@ public class GameManager : MonoBehaviour
                 combo--;
             }
             time -= 1;
+            remaintime = 5.0f;
+            Count.text = "5.00";
             audioSource.PlayOneShot(failClip);
             firstCard.closerCard();
             secondCard.closerCard();
@@ -129,6 +154,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0.0f;
         EndTxt.SetActive(true);
+        nextText.SetActive(true);
     }
 
     void closeSuc()

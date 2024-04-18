@@ -10,5 +10,11 @@ public class RtryBtn : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
+    public void RRetry()
+    {
+        SceneManager.LoadScene("SecondScene");
+    }
+
     //µåµð¾î..
+
 }

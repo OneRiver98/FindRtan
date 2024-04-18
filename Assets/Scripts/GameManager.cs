@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
                 time += 5.0f;
                 combo = 0;
             }
+            particleEffect.Play();
             audioSource.PlayOneShot(clip);
             firstCard.destroyCard();
             secondCard.destroyCard();

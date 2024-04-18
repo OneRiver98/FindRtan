@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public Camera cameraBackGround;
     int combo;
     public Animator anim;
+    public ParticleSystem particleEffect;
 
 
     public GameObject nextText; // 다음으로 넘어가는 텍스트 오브젝트
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         Time.timeScale = 1.0f;
+        particleEffect.Stop();
     }
     private void Update() 
     {
@@ -73,6 +75,7 @@ public class GameManager : MonoBehaviour
                 time += 5.0f;
                 combo = 0;
             }
+            particleEffect.Play();
             audioSource.PlayOneShot(clip);
             firstCard.destroyCard();
             secondCard.destroyCard();

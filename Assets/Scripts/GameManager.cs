@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
     public Camera cameraBackGround;
     int combo;
     public Animator anim;
+    bool check = true;
+    public Text Count;
+    public float remaintime = 5.0f;
 
     public GameObject nextText; // 다음으로 넘어가는 텍스트 오브젝트
 
@@ -41,7 +44,7 @@ public class GameManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         Time.timeScale = 1.0f;
-        particleEffect.Stop();
+        //particleEffect.Stop();
     }
     private void Update() 
     {
@@ -70,7 +73,7 @@ public class GameManager : MonoBehaviour
             {
                 firstCard.GetComponent<Card>().closeCardInvoke();
                 Count.text = "5.00";
-                remaintime = 5;
+                remaintime = 5.0f;
                 firstCard = null;
             }
         }

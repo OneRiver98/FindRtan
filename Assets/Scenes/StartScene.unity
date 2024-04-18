@@ -711,13 +711,13 @@ MonoBehaviour:
   startAudioClip: {fileID: 8300000, guid: 8c6123d1da65aa74ebf86a337868f9b7, type: 3}
   mainAudioClip: {fileID: 8300000, guid: 8c6123d1da65aa74ebf86a337868f9b7, type: 3}
   secondAudioClip: {fileID: 8300000, guid: 90eae78e8ce85a849b5b0ca11b2de641, type: 3}
-  OneBtn: {fileID: 0}
-  TwoBtn: {fileID: 0}
-  TrdBtn: {fileID: 0}
-  bgmusic: {fileID: 0}
-  mario: {fileID: 0}
-  marios: {fileID: 0}
-  marioBoss: {fileID: 0}
+  OneBtn: {fileID: 269888853}
+  TwoBtn: {fileID: 2119455308}
+  TrdBtn: {fileID: 1416637657}
+  bgmusic: {fileID: 8300000, guid: 8c6123d1da65aa74ebf86a337868f9b7, type: 3}
+  mario: {fileID: 8300000, guid: 6b8a244047741f64ab7297e7f5122510, type: 3}
+  marios: {fileID: 8300000, guid: ed1770a48d936a64eb8346f3b725760f, type: 3}
+  marioBoss: {fileID: 8300000, guid: 5c8104d05ef1309469d678da0aaa44ea, type: 3}
 --- !u!1 &1171629994
 GameObject:
   m_ObjectHideFlags: 0

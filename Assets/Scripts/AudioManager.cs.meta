@@ -3,7 +3,18 @@ guid: 19329a91deef48b47ba2600bb26848a1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - clip: {instanceID: 0}
+  - startAudioClip: {instanceID: 0}
+  - mainAudioClip: {instanceID: 0}
+  - secondAudioClip: {instanceID: 0}
+  - OneBtn: {instanceID: 0}
+  - TwoBtn: {instanceID: 0}
+  - TrdBtn: {instanceID: 0}
+  - bgmusic: {instanceID: 0}
+  - mario: {instanceID: 0}
+  - marios: {instanceID: 0}
+  - marioBoss: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

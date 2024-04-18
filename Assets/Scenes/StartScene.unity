@@ -590,6 +590,13 @@ MonoBehaviour:
   startAudioClip: {fileID: 8300000, guid: 8c6123d1da65aa74ebf86a337868f9b7, type: 3}
   mainAudioClip: {fileID: 8300000, guid: 8c6123d1da65aa74ebf86a337868f9b7, type: 3}
   secondAudioClip: {fileID: 8300000, guid: 90eae78e8ce85a849b5b0ca11b2de641, type: 3}
+  OneBtn: {fileID: 0}
+  TwoBtn: {fileID: 0}
+  TrdBtn: {fileID: 0}
+  bgmusic: {fileID: 0}
+  mario: {fileID: 0}
+  marios: {fileID: 0}
+  marioBoss: {fileID: 0}
 --- !u!1 &1433036097
 GameObject:
   m_ObjectHideFlags: 0

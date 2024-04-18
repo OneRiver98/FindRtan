@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public Camera cameraBackGround;
     int combo;
     public Animator anim;
+    public ParticleSystem particleEffect;
 
     private void Awake() 
     {
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         Time.timeScale = 1.0f;
+        particleEffect.Stop();
     }
     private void Update() 
     {
@@ -69,6 +71,7 @@ public class GameManager : MonoBehaviour
                 time += 5.0f;
                 combo = 0;
             }
+            particleEffect.Play();
             audioSource.PlayOneShot(clip);
             firstCard.destroyCard();
             secondCard.destroyCard();

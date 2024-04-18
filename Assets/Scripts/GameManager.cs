@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour
     int combo;
     public Animator anim;
 
+
+    public GameObject nextText; // 다음으로 넘어가는 텍스트 오브젝트
+
+
     private void Awake() 
     {
         if(Instance == null)
@@ -129,6 +133,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0.0f;
         EndTxt.SetActive(true);
+        nextText.SetActive(true);
     }
 
     void closeSuc()

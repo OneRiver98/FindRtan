@@ -889,8 +889,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 8300000, guid: 8c6123d1da65aa74ebf86a337868f9b7, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -997,6 +997,7 @@ MonoBehaviour:
   mario: {fileID: 8300000, guid: 6b8a244047741f64ab7297e7f5122510, type: 3}
   marios: {fileID: 8300000, guid: ed1770a48d936a64eb8346f3b725760f, type: 3}
   marioBoss: {fileID: 8300000, guid: 5c8104d05ef1309469d678da0aaa44ea, type: 3}
+  secondBGM: {fileID: 8300000, guid: 90eae78e8ce85a849b5b0ca11b2de641, type: 3}
 --- !u!1 &1433036097
 GameObject:
   m_ObjectHideFlags: 0

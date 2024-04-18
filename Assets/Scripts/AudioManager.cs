@@ -23,6 +23,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip marios;  // 3번 버튼에 연결할 음악 클립
     public AudioClip marioBoss; //20초 이후에 나올 음악 클립
 
+    public AudioClip secondBGM;  // 2번째 스테이지 노래
+
 
     private void Awake()
      {
@@ -42,7 +44,7 @@ public class AudioManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 
-        if (SceneManager.GetActiveScene().name == "StartScene")
+        /**if (SceneManager.GetActiveScene().name == "StartScene")
         {
             // 시작 씬에서는 startAudioClip을 재생
             audioSource.clip = startAudioClip;
@@ -62,7 +64,9 @@ public class AudioManager : MonoBehaviour
             audioSource.clip = secondAudioClip;
             audioSource.Play();
 
-        }
+        } **/
+
+
         // 1번 버튼 클릭 시
         OneBtn.onClick.AddListener(() => PlayMusic(bgmusic));
 
@@ -88,15 +92,5 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // 스테이지마다 다른 오디오를 재생하는 함수
-    public void PlayStageAudio(AudioClip stageAudioClip)
-    {
-        // 현재 재생 중인 오디오를 중지하고 파괴
-        audioSource.Stop();
-        Destroy(audioSource.clip);
 
-        // 새로운 오디오 클립을 할당하고 재생
-        audioSource.clip = stageAudioClip;
-        audioSource.Play();
-    }
 }

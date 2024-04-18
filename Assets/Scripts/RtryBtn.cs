@@ -12,6 +12,7 @@ public class RtryBtn : MonoBehaviour
 
     public void RRetry()
     {
+        AudioManager.instance.PlayMusic(AudioManager.instance.secondBGM);
         SceneManager.LoadScene("SecondScene");
     }
 

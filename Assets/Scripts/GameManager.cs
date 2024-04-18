@@ -136,6 +136,7 @@ public class GameManager : MonoBehaviour
             if(fullCount == 0)
             {
                 GameOver();
+                nextText.SetActive(true);
                 tryTxt.text = tryMatche + " 번 만에 게임을 클리어 했어요!";
             }
         }
@@ -161,7 +162,6 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0.0f;
         EndTxt.SetActive(true);
-        nextText.SetActive(true);
     }
 
     void closeSuc()

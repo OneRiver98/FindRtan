@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
@@ -13,8 +14,17 @@ public class AudioManager : MonoBehaviour
     public AudioClip mainAudioClip;
     public AudioClip secondAudioClip;
 
+    public Button OneBtn; // 1번 버튼
+    public Button TwoBtn; // 2번 버튼
+    public Button TrdBtn; // 3번 버튼
 
-    /** private void Awake()
+    public AudioClip bgmusic; // 1번 버튼에 연결할 음악 클립
+    public AudioClip mario;   // 2번 버튼에 연결할 음악 클립
+    public AudioClip marios;  // 3번 버튼에 연결할 음악 클립
+    public AudioClip marioBoss; //20초 이후에 나올 음악 클립
+
+
+    private void Awake()
      {
          if (instance == null)
          {
@@ -26,15 +36,7 @@ public class AudioManager : MonoBehaviour
              Destroy(gameObject);
          }
          
-     }**/
-
-    /** void Start()
-     {
-         audioSource = GetComponent<AudioSource>();
-
-         audioSource.clip = this.clip;
-         audioSource.Play();
-     } **/
+     }
 
     void Start()
     {
@@ -60,6 +62,29 @@ public class AudioManager : MonoBehaviour
             audioSource.clip = secondAudioClip;
             audioSource.Play();
 
+        }
+        // 1번 버튼 클릭 시
+        OneBtn.onClick.AddListener(() => PlayMusic(bgmusic));
+
+        // 2번 버튼 클릭 시
+        TwoBtn.onClick.AddListener(() => PlayMusic(mario));
+
+        // 3번 버튼 클릭 시
+        TrdBtn.onClick.AddListener(() => PlayMusic(marios));
+    }
+
+    public void PlayMusic(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            // 현재 재생 중인 음악이 있으면 멈추기
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+            // 새로운 음악 재생
+            audioSource.clip = clip;
+            audioSource.Play();
         }
     }
 

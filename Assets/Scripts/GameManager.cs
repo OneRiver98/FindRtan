@@ -25,6 +25,10 @@ public class GameManager : MonoBehaviour
     public Camera cameraBackGround;
     int combo;
     public Animator anim;
+    public Text Count;
+    public float remaintime = 5.0f;
+    bool check = true;
+    public ParticleSystem particleEffect;
 
     public GameObject nextText; // 다음으로 넘어가는 텍스트 오브젝트
 

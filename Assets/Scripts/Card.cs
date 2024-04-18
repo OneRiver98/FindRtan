@@ -17,6 +17,7 @@ public class Card : MonoBehaviour
     int cardClickCount;
     public SpriteRenderer frontImage;
     public SpriteRenderer backImage;
+    private int flippedCardCount = 0;
 
     public void setting(int abc)
     {
@@ -52,6 +53,32 @@ public class Card : MonoBehaviour
     public void closerCard()
     {
         Invoke("closeCardInvoke", 1.0f);
+        flippedCardCount++;
+        if (flippedCardCount == 1)
+        {
+            backImage.color = Color.gray;
+        }
+
+        if (flippedCardCount == 2)
+        {
+            backImage.color = Color.red;
+        }
+
+        if (flippedCardCount == 3)
+        {
+            backImage.color = Color.blue;
+        }
+
+        if (flippedCardCount == 4)
+        {
+            backImage.color = Color.green;
+        }
+
+        if (flippedCardCount == 5)
+        {
+            backImage.color = Color.yellow;
+        }
+
     }
 
     public void destroyInvoke()
@@ -63,7 +90,6 @@ public class Card : MonoBehaviour
         anim.SetBool("isOpne",false);
         front.SetActive(false);
         back.SetActive(true);
-        backImage.color = new Color(162/255f, 162/255f,162/255f,1f);
     }
     //texet
 }

@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     float time = 60.0f;
     void Start()
     {
+        Count.gameObject.SetActive(false);
         audioSource = GetComponent<AudioSource>();
         Time.timeScale = 1.0f;
         particleEffect.Stop();
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
         }
         if (firstCard != null)
         {
+            Count.gameObject.SetActive(true);
             remaintime -= Time.deltaTime;
             Count.text = remaintime.ToString("N2");
             if (remaintime < 0)
@@ -77,6 +79,10 @@ public class GameManager : MonoBehaviour
                 remaintime = 5;
                 firstCard = null;
             }
+        }
+        else
+        {
+            Count.gameObject.SetActive(false);
         }
     }
 
